@@ -15,6 +15,7 @@ Este projeto é composto por três serviços principais:
 
 ```sh
 docker-compose up -d
+docker compose exec user-service php artisan migrate --seed
 ```
 
 3. Acesse os serviços:
