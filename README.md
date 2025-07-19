@@ -14,9 +14,12 @@ Este projeto é composto por três serviços principais:
 2. Execute:
 
 ```sh
+
 cp .env.example .env
 docker-compose up -d
+# Aguarde alguns segundos, para o Mysql ficar pronto
 docker compose exec user-service php artisan migrate --seed
+
 ```
 Usuário: test@test.com
 Senha: 12345678
