@@ -14,9 +14,12 @@ Este projeto é composto por três serviços principais:
 2. Execute:
 
 ```sh
+cp .env.example .env
 docker-compose up -d
 docker compose exec user-service php artisan migrate --seed
 ```
+Usuário: test@test.com
+Senha: 12345678
 
 3. Acesse os serviços:
 - Frontend: http://localhost:5173
@@ -41,4 +44,4 @@ docker compose exec user-service php artisan migrate --seed
 
 ## Observações
 - Utilize os arquivos `.env` para configuração de ambiente.
-- O fluxo de enriquecimento é assíncrono via RabbitMQ.
+
