@@ -4,6 +4,7 @@ import UserList from './components/User/UserList';
 import UserForm from './components/User/UserForm';
 import UserDetail from './components/User/UserDetail';
 import Login from './components/Login/Login';
+import ArchitecturePage from './components/Architecture/ArchitecturePage';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -26,8 +27,29 @@ function MyAppBar() {
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           Teste Técnico para Especialista Full Stack
         </Typography>
-        <Button color="default" component={Link} to="/">Lista de Usuários</Button>
-        <Button color="default" component={Link} to="/new-user">Novo Usuário</Button>
+        <Button 
+          color="default" 
+          component={Link} 
+          to="/"
+          sx={{ mr: 3 }}
+        >
+          Lista de Usuários
+        </Button>
+        <Button 
+          color="default" 
+          component={Link} 
+          to="/new-user"
+          sx={{ mr: 3 }}
+        >
+          Novo Usuário
+        </Button>
+        <Button 
+          color="default" 
+          component={Link} 
+          to="/architecture"
+        >
+          Diagrama de Arquitetura
+        </Button>
       </Toolbar>
     </AppBar>
   );
@@ -43,6 +65,7 @@ function App() {
           <Route path="/" element={<RequireAuth><UserList /></RequireAuth>} />
           <Route path="/new-user" element={<RequireAuth><UserForm /></RequireAuth>} />
           <Route path="/user/:id" element={<RequireAuth><UserDetail /></RequireAuth>} />
+          <Route path="/architecture" element={<RequireAuth><ArchitecturePage /></RequireAuth>} />
         </Routes>
       </Container>
     </Router>
