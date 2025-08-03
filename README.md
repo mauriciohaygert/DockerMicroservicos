@@ -1,4 +1,4 @@
-# Teste Técnico Full Stack – Integração entre Serviços PHP, Node.js e Front-end
+# Projeto de Integração entre Serviços PHP, Node.js e Front-end
 
 ## Visão Geral
 
